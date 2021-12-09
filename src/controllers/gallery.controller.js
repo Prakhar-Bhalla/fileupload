@@ -17,7 +17,7 @@ router.get("/", async(req, res) => {
     }
 })
 
-router.post("/", upload.array("image_urls", 3), async(req, res) => {
+router.post("/", upload.array("image_urls", 5), async(req, res) => {
     try {
         const filePaths = req.files.map((file) => {
             return file.path;
